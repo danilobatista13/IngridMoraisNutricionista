@@ -9,7 +9,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
 }
 
 .container {
@@ -20,10 +20,10 @@ body {
 
 /* Header e Navegação */
 header {
-    background: #5CB85C; /* Tom de verde saudável para o cabeçalho */
+    background: #7fda58;
     color: #fff;
     padding: 1rem 0;
-    position: sticky; /* Fixa o cabeçalho no topo ao rolar */
+    position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -42,9 +42,9 @@ header .logo h1 {
     margin: 0;
 }
 
-.cor-destaque{
-        color: rgb(252, 103, 1);
-    }
+.cor-destaque {
+    color: #724f37;
+}
     
 header nav ul {
     list-style: none;
@@ -64,17 +64,17 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #e0ffe0; /* Verde mais claro no hover */
-    border-bottom: 2px solid #e0ffe0;
+    color: #bcecac;
+    border-bottom: 2px solid #bcecac;
 }
 
 /* Seção Início (Hero) */
 .hero {
-    background: url('https://via.placeholder.com/1500x800/8BC34A/FFFFFF?text=Imagem+de+Fundo+Nutricao') no-repeat center center/cover; /* Imagem de fundo para a seção Hero */
+    background: url('https://via.placeholder.com/1500x800/bcecac/724f37?text=Imagem+de+Fundo+Nutricao') no-repeat center center/cover; 
     color: #fff;
     text-align: center;
     padding: 100px 20px;
-    height: 70vh; /* Altura da viewport */
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,7 +86,6 @@ header nav ul li a:hover {
   vertical-align: middle;
 }
 
-
 .hero::before {
     content: '';
     position: absolute;
@@ -94,54 +93,57 @@ header nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Overlay escuro para melhor legibilidade do texto */
+    background: rgba(114, 79, 55, 0.65);
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    max-width: 850px;
 }
 
 .hero-content h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-    /* Animações simples para o texto do hero */
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
     animation: fadeInDown 1s ease-out;
 }
 
 .hero-content h3 {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    font-weight: 400;
     margin-bottom: 20px;
     animation: fadeIn 1.5s ease-out;
+    color: #fafoe1;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 30px;
     animation: fadeInUp 1s ease-out;
 }
 
 .btn {
     display: inline-block;
-    background: #FFC107; /* Amarelo/Laranja para o botão de CTA */
-    color: #333;
-    padding: 12px 25px;
+    background: #fa761f;
+    color: #fff;
+    padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: 700;
+    font-size: 1.1rem;
     transition: background 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(250, 118, 31, 0.4);
 }
 
 .btn:hover {
-    background: #FFD54F;
-    transform: translateY(-2px);
+    background: #e06515;
+    transform: translateY(-3px);
+    color: #fff;
 }
 
-/* Animações (usadas na seção Hero) */
 @keyframes fadeInDown {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -157,7 +159,6 @@ header nav ul li a:hover {
     to { opacity: 1; transform: translateY(0); }
 }
 
-
 /* Seções Gerais */
 .section {
     padding: 80px 0;
@@ -167,8 +168,8 @@ header nav ul li a:hover {
 .section h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem;
-    margin-bottom: 40px;
-    color: #4CAF50; /* Verde mais escuro para títulos das seções */
+    margin-bottom: 30px;
+    color: #724f37;
 }
 
 .section p {
@@ -178,70 +179,85 @@ header nav ul li a:hover {
 }
 
 .grey-background {
-    background-color: #f0f0f0;
+    background-color: #fafoe1;
 }
 
 /* Seção Sobre Mim */
 .about-content {
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+    flex-wrap: wrap; 
     justify-content: center;
     align-items: center;
-    gap: 40px; /* Espaçamento entre a imagem e o texto */
+    gap: 50px; 
     text-align: left;
 }
 
 .about-content .profile-img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%; /* Torna a imagem redonda */
-    object-fit: cover; /* Garante que a imagem preencha o círculo */
-    border: 5px solid #5CB85C; /* Borda verde */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 6px solid #7fda58;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .about-content div {
     max-width: 600px;
 }
 
-/* Seção Serviços */
+/* Seção Serviços & Como Funciona */
 .obj-centralizado {
   text-align: center;
 }
 
-.services-grid {
+.services-grid, .steps-grid {
     display: grid;
-    /* Adapta o número de colunas automaticamente, com mínimo de 280px */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
 
-.service-item {
+.service-item, .step-item {
     background: #fff;
-    padding: 30px;
+    padding: 35px 25px;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 20px rgba(114, 79, 55, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
+    border-bottom: 4px solid transparent;
 }
 
-.service-item:hover {
-    transform: translateY(-10px); /* Efeito de elevação no hover */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+.service-item:hover, .step-item:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 25px rgba(114, 79, 55, 0.12);
+    border-bottom: 4px solid #7fda58;
 }
 
-.service-item h3 {
+.service-item h3, .step-item h3 {
     font-family: 'Playfair Display', serif;
-    color: #5CB85C;
+    color: #724f37;
     margin-bottom: 15px;
     font-size: 1.6rem;
 }
 
-.service-item p {
+.service-item p, .step-item p {
     font-size: 1rem;
     line-height: 1.8;
-    margin: 0; /* Anula o margin-bottom padrão de p */
+    margin: 0; 
+}
+
+.step-number {
+    background: #bcecac;
+    color: #724f37;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 /* Seção Depoimentos */
@@ -253,26 +269,31 @@ header nav ul li a:hover {
 }
 
 .testimonial-item {
-    background: #fff;
-    padding: 30px;
+    background: #fafoe1;
+    padding: 35px;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    text-align: center;
+    border-left: 5px solid #fa761f;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: left;
 }
 
 .testimonial-item p {
     font-style: italic;
-    margin-bottom: 15px;
-    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
     color: #555;
-    max-width: none; /* Anula o max-width para o texto do depoimento */
+    max-width: none; 
 }
 
 .testimonial-item cite {
     display: block;
-    font-weight: 600;
-    color: #4CAF50;
-    font-size: 0.95rem;
+    font-weight: 700;
+    color: #724f37;
+    font-size: 1rem;
+}
+
+.text-center {
+    text-align: center;
 }
 
 /* Seção Contato */
@@ -280,75 +301,39 @@ header nav ul li a:hover {
     margin-top: 40px;
     margin-bottom: 40px;
     font-size: 1.1rem;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .contact-info p {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     max-width: none;
 }
 
 .contact-info a {
-    color: #5CB85C;
+    color: #7fda58;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .contact-info a:hover {
     text-decoration: underline;
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 30px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    text-align: left;
-}
-
-.contact-form h3 {
-    font-family: 'Playfair Display', serif;
-    color: #4CAF50;
-    margin-bottom: 25px;
-    font-size: 2rem;
-    text-align: center;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-}
-
-.contact-form textarea {
-    resize: vertical; /* Permite redimensionar verticalmente */
-}
-
-.contact-form .btn {
-    width: 100%;
-    text-align: center;
-    padding: 15px;
-    font-size: 1.1rem;
-    cursor: pointer;
+    color: #724f37;
 }
 
 /* Footer */
 footer {
-    background: #333;
-    color: #fff;
+    background: #724f37;
+    color: #fafoe1;
     text-align: center;
     padding: 25px 0;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
-/* Responsividade (Ajustes para telas menores) */
+/* Responsividade */
 @media (max-width: 768px) {
     header nav {
         flex-direction: column;
@@ -359,6 +344,7 @@ footer {
         flex-direction: column;
         width: 100%;
         margin-top: 15px;
+        padding-left: 0;
     }
 
     header nav ul li {
@@ -368,11 +354,11 @@ footer {
     }
 
     .hero-content h2 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .hero-content h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .hero-content p {
@@ -395,35 +381,25 @@ footer {
     .about-content .profile-img {
         margin-bottom: 20px;
     }
-
-    .service-item, .testimonial-item {
-        margin-bottom: 20px; /* Adiciona espaçamento entre itens em telas menores */
-    }
 }
 
 @media (max-width: 480px) {
     .hero-content h2 {
-        font-size: 2rem;
-    }
-
-    .hero-content h3 {
-        font-size: 1.2rem;
-    }
-
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-
-    .section h2 {
         font-size: 1.8rem;
     }
 
-    .section p {
-        font-size: 1rem;
+    .hero-content h3 {
+        font-size: 1.1rem;
     }
 
-    .contact-form h3 {
+    .btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .section h2 {
         font-size: 1.8rem;
     }
 }
