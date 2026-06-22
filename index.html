@@ -7,8 +7,8 @@
     <link rel="icon" href="imagens/icon.png" type="image/png">
     <link rel="stylesheet" href="stylesheet.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    
-    </head>
+    <script src="script.js" defer></script>
+</head>
 <body>
     <header>
         <nav>
@@ -23,6 +23,11 @@
                 <li><a href="#depoimentos">Resultados</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
+            <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
@@ -36,7 +41,7 @@
         </div>
     </section>
 
-    <section id="como-funciona" class="section grey-background">
+    <section id="como-funciona" class="section grey-background reveal">
         <div class="container">
             <h2>Como Funciona a Consulta?</h2>
             <p>Um acompanhamento descomplicado, desenhado para se encaixar na sua rotina, seja no formato online ou presencial.</p>
@@ -62,7 +67,7 @@
         </div>
     </section>
 
-    <section id="sobre" class="section">
+    <section id="sobre" class="section reveal">
         <div class="container">
             <h2>Conheça a Dra. Ingrid Morais</h2>
             <div class="about-content">
@@ -76,7 +81,7 @@
         </div>
     </section>
 
-    <section id="servicos" class="section grey-background">
+    <section id="servicos" class="section grey-background reveal">
         <div class="container">
             <h2>Especialidades</h2>
             <h3>Soluções nutricionais focadas no seu metabolismo.</h3>
@@ -97,24 +102,31 @@
         </div>
     </section>
 
-    <section id="depoimentos" class="section">
+    <section id="depoimentos" class="section reveal">
         <div class="container">
             <h2>Resultados que Inspiram</h2>
             <p>O que dizem os pacientes que já transformaram suas rotinas:</p>
-            <div class="testimonials-grid">
-                <div class="testimonial-item">
-                    <p>"Ingrid ótima nutricionista, ela cria a dieta conforme a nossa condição, assim fica mais fácil de seguir. Gostei demais, já passei por várias nutricionistas e não deram certo. Com a dieta criada por Ingrid se tornou mais fácil ter uma alimentação saudável. E toda família entrou no ritmo."</p>
-                    <cite>- Uanda Senar</cite>
+            
+            <div class="carousel-container">
+                <button id="carousel-prev" class="carousel-control prev" aria-label="Depoimento anterior">&#10094;</button>
+                <div class="testimonials-carousel">
+                    <div class="testimonial-item">
+                        <p>"Ingrid ótima nutricionista, ela cria a dieta conforme a nossa condição, assim fica mais fácil de seguir. Gostei demais, já passei por várias nutricionistas e não deram certo. Com a dieta criada por Ingrid se tornou mais fácil ter uma alimentação saudável. E toda família entrou no ritmo."</p>
+                        <cite>- Uanda Senar</cite>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"Ingrid Morais representa a excelência na área, com domínio e amplo conhecimento técnico atrelado a um atendimento de alto padrão. O resultado é ótimo e definitivo. Amei❤️❤️"</p>
+                        <cite>- Romilda</cite>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"Excelente profissional. Preocupada, atenciosa, se importa de verdade com seus pacientes e sua saúde. Super recomendo."</p>
+                        <cite>- Adrielly Andrade</cite>
+                    </div>
                 </div>
-                <div class="testimonial-item">
-                    <p>"Ingrid Morais representa a excelência na área, com domínio e amplo conhecimento técnico atrelado a um atendimento de alto padrão. O resultado é ótimo e definitivo. Amei❤️❤️"</p>
-                    <cite>- Romilda</cite>
-                </div>
-                 <div class="testimonial-item">
-                    <p>"Excelente profissional. Preocupada, atenciosa, se importa de verdade com seus pacientes e sua saúde. Super recomendo."</p>
-                    <cite>- Adrielly Andrade</cite>
-                </div>
+                <button id="carousel-next" class="carousel-control next" aria-label="Próximo depoimento">&#10095;</button>
             </div>
+            <div id="carousel-dots" class="carousel-dots"></div>
+            
             <br><br>
             <div class="text-center">
                 <a href="https://wa.me/55035991196419" target="_blank" class="btn">Quero ser o próximo caso de sucesso</a>
@@ -122,7 +134,35 @@
         </div>
     </section>
 
-    <section id="contato" class="section grey-background">
+    <!-- Seção Calculadora de IMC -->
+    <section id="imc-section" class="section reveal">
+        <div class="container">
+            <h2>Consulte seu IMC</h2>
+            <p>Insira seus dados abaixo para calcular seu Índice de Massa Corporal (IMC) e entender como a nutrição personalizada pode ajudar.</p>
+            
+            <div class="bmi-container">
+                <form id="bmi-form" class="bmi-form">
+                    <div class="bmi-inputs-row">
+                        <div class="input-group">
+                            <label for="bmi-peso">Peso (kg)</label>
+                            <input type="number" id="bmi-peso" step="0.1" min="20" max="300" placeholder="Ex: 70.5" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="bmi-altura">Altura (cm)</label>
+                            <input type="number" id="bmi-altura" step="1" min="100" max="250" placeholder="Ex: 170" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Calcular IMC</button>
+                </form>
+                
+                <div id="bmi-result-box" class="bmi-result-box">
+                    <p class="bmi-placeholder">Digite seu peso e altura para ver o resultado e recomendações.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section grey-background reveal">
         <div class="container">
             <h2>Dê o Primeiro Passo</h2>
             <p>Entre em contato para agendar sua consulta ou tirar suas dúvidas sobre o acompanhamento online ou presencial.</p>
@@ -141,5 +181,11 @@
         </div>
     </footer>
 
+    <!-- Botão Flutuante do WhatsApp com animação de pulso -->
+    <a href="https://wa.me/55035991196419?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20nutricional." class="whatsapp-float" target="_blank" aria-label="Fale comigo no WhatsApp">
+        <svg viewBox="0 0 24 24" class="whatsapp-icon" fill="currentColor">
+            <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 001.37 5.017L2 22l5.135-1.348a9.927 9.927 0 004.871 1.28h.005c5.507 0 9.99-4.478 9.99-9.985A9.997 9.997 0 0012.012 2zm5.717 14.195c-.245.69-1.22 1.263-1.68 1.309-.459.047-.92.23-2.924-.567-2.564-1.018-4.211-3.626-4.339-3.797-.127-.17-1.04-1.384-1.04-2.637 0-1.253.66-1.868.895-2.113.236-.245.513-.306.685-.306.173 0 .346.002.496.01.157.008.369-.06.577.442.213.513.728 1.777.79 1.905.064.127.107.277.021.447-.085.17-.128.277-.256.426-.128.15-.269.336-.384.453-.128.127-.26.265-.11.523.149.255.66 1.086 1.417 1.758.977.868 1.8 1.139 2.055 1.267.256.128.405.106.554-.064.15-.17.639-.745.81-1 .17-.255.34-.213.575-.127.237.085 1.5.707 1.757.835.257.128.427.192.49.3.064.106.064.617-.18 1.307z"/>
+        </svg>
+    </a>
 </body>
 </html>
