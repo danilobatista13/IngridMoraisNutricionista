@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <p class="bmi-advice">${textAdvice}</p>
                 <div class="bmi-cta-box">
-                    <a href="https://wa.me/55035991196419?text=Olá,%20fiz%20o%20teste%20de%20IMC%20(deu%20${imc}%20-%20${status})%20e%20gostaria%20de%20marcar%20uma%20consulta." target="_blank" class="btn btn-small">Marcar Consulta Personalizada</a>
+                    <a href="https://wa.me/5535991196419?text=Ol%C3%A1%20Ingrid!%20Fiz%20o%20teste%20de%20IMC%20no%20site%20(deu%20${imc}%20-%20${encodeURIComponent(status)})%20e%20gostaria%20de%20marcar%20uma%20consulta." target="_blank" class="btn btn-small">Marcar Consulta Personalizada</a>
                 </div>
             `;
             
