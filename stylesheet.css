@@ -185,7 +185,7 @@ header nav ul li a:hover {
     animation: fadeInDown 1s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.hero-content h3 {
+.hero-content .hero-subtitle {
     font-size: 1.6rem;
     font-weight: 400;
     margin-bottom: 20px;
@@ -275,7 +275,8 @@ header nav ul li a:hover {
     border-radius: 2px;
 }
 
-.section h3 {
+.section h3,
+.section .section-subtitle {
     color: var(--text-muted);
     font-size: 1.2rem;
     font-weight: 500;
@@ -336,6 +337,13 @@ header nav ul li a:hover {
 /* Seção Serviços & Como Funciona */
 .obj-centralizado {
   text-align: center;
+}
+
+.service-icon {
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 5px;
 }
 
 .services-grid, .steps-grid {
@@ -510,6 +518,39 @@ header nav ul li a:hover {
 
 .text-center {
     text-align: center;
+}
+
+/* Perguntas Frequentes */
+.faq-list {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: left;
+}
+
+.faq-list details {
+    background: var(--bg-white);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 15px;
+    padding: 20px 25px;
+}
+
+.faq-list summary {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+    list-style-position: outside;
+}
+
+.faq-list details[open] summary {
+    margin-bottom: 10px;
+}
+
+.faq-list details p {
+    margin: 0;
+    font-size: 1rem;
+    max-width: none;
 }
 
 /* Seção Contato */
@@ -790,7 +831,7 @@ footer {
         font-size: 2.2rem;
     }
 
-    .hero-content h3 {
+    .hero-content .hero-subtitle {
         font-size: 1.3rem;
     }
 
@@ -843,7 +884,7 @@ footer {
         margin-top: 12px;
     }
 
-    .hero-content h3 {
+    .hero-content .hero-subtitle {
         font-size: 1.1rem;
     }
 
